@@ -62,7 +62,7 @@ function App() {
 
       try {
         const response = await axios.post(
-          "http://localhost:3001/upload",
+          "https://financial-pdf-extractor-backend.onrender.com/upload",
           formData,
           {
             headers: {
@@ -119,7 +119,7 @@ function App() {
   const handleShowData = async () => {
     if (extractedText) {
       try {
-        const response = await fetch("http://localhost:3001/fetch-data"); // Adjust the URL if necessary
+        const response = await fetch("https://financial-pdf-extractor-backend.onrender.com/fetch-data");
         if (!response.ok) {
           throw new Error("Server Down");
         }
